@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>División</title>
+   
+</head>
+<body>
+    <div >
+        <h1>Calculadora de División</h1>
+        <form method="POST">
+            <label> Ingrese el primer número:</label>
+            <input type="number" name="numero1" required>
+
+            <label> Ingrese el segundo número:</label>
+            <input type="number" name="numero2" required>
+
+            <button type="submit">Calcular división</button>
+
+        </form>
+      
+    
+    </div>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% elif resultado is not none %}
+        <p>El resultado de la división es: {{ resultado }}</p>
+    {% endif %}
+
+</body>
+</html>
